@@ -16,5 +16,29 @@ namespace Graphics_Nesterovich_k0610
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+			if (radioPRBL.Checked)
+			{
+
+			}
+			else if (radioSinCos.Checked)
+			{
+
+			}
+			else if (radioGPBL.Checked)
+			{
+
+			}
+			else if (radioStep.Checked)
+			{
+
+			}
+			else
+			{
+				MessageBox.Show("Выбор функции", "Произошла ошибка!");
+			}
+		}
     }
 }

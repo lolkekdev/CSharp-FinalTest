@@ -60,6 +60,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "СТАРТ";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // radioPRBL
             // 
