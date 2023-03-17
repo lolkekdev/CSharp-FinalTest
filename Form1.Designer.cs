@@ -54,6 +54,7 @@ namespace Graphics_Nesterovich_k0610
             // 
             // btnStart
             // 
+            this.btnStart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnStart.Location = new System.Drawing.Point(12, 161);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(216, 33);
@@ -97,19 +98,21 @@ namespace Graphics_Nesterovich_k0610
             this.radioStep.AutoSize = true;
             this.radioStep.Location = new System.Drawing.Point(7, 89);
             this.radioStep.Name = "radioStep";
-            this.radioStep.Size = new System.Drawing.Size(67, 17);
+            this.radioStep.Size = new System.Drawing.Size(79, 17);
             this.radioStep.TabIndex = 3;
-            this.radioStep.Text = "Степень";
+            this.radioStep.Text = "Степенная";
             this.radioStep.UseVisualStyleBackColor = true;
             // 
             // ChoosingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 218);
+            this.ClientSize = new System.Drawing.Size(239, 216);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.groupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChoosingForm";
             this.Text = "Графики Функций";
             this.groupBox.ResumeLayout(false);
