@@ -31,11 +31,11 @@ namespace Graphics_Nesterovich_k0610
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChoosingForm));
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.radioPRBL = new System.Windows.Forms.RadioButton();
-            this.radioSinCos = new System.Windows.Forms.RadioButton();
-            this.radioGPBL = new System.Windows.Forms.RadioButton();
             this.radioStep = new System.Windows.Forms.RadioButton();
+            this.radioGPBL = new System.Windows.Forms.RadioButton();
+            this.radioSinCos = new System.Windows.Forms.RadioButton();
+            this.radioPRBL = new System.Windows.Forms.RadioButton();
+            this.btnStart = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,36 +52,15 @@ namespace Graphics_Nesterovich_k0610
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Выберите функцию";
             // 
-            // btnStart
+            // radioStep
             // 
-            this.btnStart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnStart.Location = new System.Drawing.Point(12, 161);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(216, 33);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "СТАРТ";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // radioPRBL
-            // 
-            this.radioPRBL.AutoSize = true;
-            this.radioPRBL.Location = new System.Drawing.Point(7, 20);
-            this.radioPRBL.Name = "radioPRBL";
-            this.radioPRBL.Size = new System.Drawing.Size(75, 17);
-            this.radioPRBL.TabIndex = 0;
-            this.radioPRBL.Text = "Парабола";
-            this.radioPRBL.UseVisualStyleBackColor = true;
-            // 
-            // radioSinCos
-            // 
-            this.radioSinCos.AutoSize = true;
-            this.radioSinCos.Location = new System.Drawing.Point(7, 43);
-            this.radioSinCos.Name = "radioSinCos";
-            this.radioSinCos.Size = new System.Drawing.Size(150, 17);
-            this.radioSinCos.TabIndex = 1;
-            this.radioSinCos.Text = "Синусоида/Косинусоида";
-            this.radioSinCos.UseVisualStyleBackColor = true;
+            this.radioStep.AutoSize = true;
+            this.radioStep.Location = new System.Drawing.Point(7, 89);
+            this.radioStep.Name = "radioStep";
+            this.radioStep.Size = new System.Drawing.Size(79, 17);
+            this.radioStep.TabIndex = 3;
+            this.radioStep.Text = "Степенная";
+            this.radioStep.UseVisualStyleBackColor = true;
             // 
             // radioGPBL
             // 
@@ -93,15 +72,37 @@ namespace Graphics_Nesterovich_k0610
             this.radioGPBL.Text = "Гипербола";
             this.radioGPBL.UseVisualStyleBackColor = true;
             // 
-            // radioStep
+            // radioSinCos
             // 
-            this.radioStep.AutoSize = true;
-            this.radioStep.Location = new System.Drawing.Point(7, 89);
-            this.radioStep.Name = "radioStep";
-            this.radioStep.Size = new System.Drawing.Size(79, 17);
-            this.radioStep.TabIndex = 3;
-            this.radioStep.Text = "Степенная";
-            this.radioStep.UseVisualStyleBackColor = true;
+            this.radioSinCos.AutoSize = true;
+            this.radioSinCos.Location = new System.Drawing.Point(7, 43);
+            this.radioSinCos.Name = "radioSinCos";
+            this.radioSinCos.Size = new System.Drawing.Size(150, 17);
+            this.radioSinCos.TabIndex = 1;
+            this.radioSinCos.Text = "Синусоида/Косинусоида";
+            this.radioSinCos.UseVisualStyleBackColor = true;
+            // 
+            // radioPRBL
+            // 
+            this.radioPRBL.AutoSize = true;
+            this.radioPRBL.Location = new System.Drawing.Point(7, 20);
+            this.radioPRBL.Name = "radioPRBL";
+            this.radioPRBL.Size = new System.Drawing.Size(75, 17);
+            this.radioPRBL.TabIndex = 0;
+            this.radioPRBL.Text = "Парабола";
+            this.radioPRBL.UseVisualStyleBackColor = true;
+            this.radioPRBL.CheckedChanged += new System.EventHandler(this.radioPRBL_CheckedChanged);
+            // 
+            // btnStart
+            // 
+            this.btnStart.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnStart.Location = new System.Drawing.Point(12, 161);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(216, 33);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "СТАРТ";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // ChoosingForm
             // 

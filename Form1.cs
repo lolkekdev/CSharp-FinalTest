@@ -54,5 +54,10 @@ namespace Graphics_Nesterovich_k0610
 				MessageBox.Show("Выбор функции", "Произошла ошибка!");
 			}
 		}
+
+        private void radioPRBL_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
