@@ -37,8 +37,8 @@ namespace Graphics_Nesterovich_k0610
             this.lblB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbFuncChoose = new System.Windows.Forms.GroupBox();
-            this.radioSin = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioSin = new System.Windows.Forms.RadioButton();
             this.btnBuild = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.nudA = new System.Windows.Forms.NumericUpDown();
@@ -121,17 +121,6 @@ namespace Graphics_Nesterovich_k0610
             this.gbFuncChoose.TabStop = false;
             this.gbFuncChoose.Text = "Выберите функцию";
             // 
-            // radioSin
-            // 
-            this.radioSin.AutoSize = true;
-            this.radioSin.Location = new System.Drawing.Point(7, 20);
-            this.radioSin.Name = "radioSin";
-            this.radioSin.Size = new System.Drawing.Size(79, 17);
-            this.radioSin.TabIndex = 0;
-            this.radioSin.TabStop = true;
-            this.radioSin.Text = "Синусоида";
-            this.radioSin.UseVisualStyleBackColor = true;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -142,6 +131,17 @@ namespace Graphics_Nesterovich_k0610
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Косинусоида";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioSin
+            // 
+            this.radioSin.AutoSize = true;
+            this.radioSin.Location = new System.Drawing.Point(7, 20);
+            this.radioSin.Name = "radioSin";
+            this.radioSin.Size = new System.Drawing.Size(79, 17);
+            this.radioSin.TabIndex = 0;
+            this.radioSin.TabStop = true;
+            this.radioSin.Text = "Синусоида";
+            this.radioSin.UseVisualStyleBackColor = true;
             // 
             // btnBuild
             // 
@@ -163,6 +163,11 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudA
             // 
+            this.nudA.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudA.Location = new System.Drawing.Point(45, 348);
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(93, 20);
@@ -170,6 +175,11 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudB
             // 
+            this.nudB.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudB.Location = new System.Drawing.Point(46, 372);
             this.nudB.Name = "nudB";
             this.nudB.Size = new System.Drawing.Size(92, 20);
@@ -177,6 +187,11 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudC
             // 
+            this.nudC.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudC.Location = new System.Drawing.Point(46, 396);
             this.nudC.Name = "nudC";
             this.nudC.Size = new System.Drawing.Size(93, 20);

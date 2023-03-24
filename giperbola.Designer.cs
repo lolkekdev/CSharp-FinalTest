@@ -66,6 +66,11 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudA
             // 
+            this.nudA.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudA.Location = new System.Drawing.Point(47, 26);
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(63, 20);
@@ -73,6 +78,11 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudB
             // 
+            this.nudB.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudB.Location = new System.Drawing.Point(48, 63);
             this.nudB.Name = "nudB";
             this.nudB.Size = new System.Drawing.Size(62, 20);
