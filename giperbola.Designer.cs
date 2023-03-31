@@ -37,11 +37,12 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picGPBL = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGPBL)).BeginInit();
             this.SuspendLayout();
             // 
             // lblA
@@ -66,24 +67,46 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudA
             // 
+            this.nudA.DecimalPlaces = 1;
             this.nudA.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
             this.nudA.Location = new System.Drawing.Point(47, 26);
+            this.nudA.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudA.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(63, 20);
             this.nudA.TabIndex = 2;
             // 
             // nudB
             // 
+            this.nudB.DecimalPlaces = 1;
             this.nudB.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
             this.nudB.Location = new System.Drawing.Point(48, 63);
+            this.nudB.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudB.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
             this.nudB.Name = "nudB";
             this.nudB.Size = new System.Drawing.Size(62, 20);
             this.nudB.TabIndex = 3;
@@ -114,14 +137,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(201, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 381);
-            this.panel1.TabIndex = 17;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox1
             // 
@@ -133,13 +149,23 @@ namespace Graphics_Nesterovich_k0610
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // picGPBL
+            // 
+            this.picGPBL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picGPBL.Location = new System.Drawing.Point(190, 12);
+            this.picGPBL.Name = "picGPBL";
+            this.picGPBL.Size = new System.Drawing.Size(376, 416);
+            this.picGPBL.TabIndex = 19;
+            this.picGPBL.TabStop = false;
+            this.picGPBL.Paint += new System.Windows.Forms.PaintEventHandler(this.picGPBL_Paint);
+            // 
             // giperbola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 461);
+            this.Controls.Add(this.picGPBL);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuild);
@@ -155,6 +181,7 @@ namespace Graphics_Nesterovich_k0610
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGPBL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +196,7 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.Button btnBuild;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picGPBL;
     }
 }

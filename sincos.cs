@@ -12,6 +12,10 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class sincos : Form
     {
+
+        Graphics polotno;
+        bool razresh = false;
+
         public sincos()
         {
             InitializeComponent();
@@ -25,6 +29,15 @@ namespace Graphics_Nesterovich_k0610
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void picSin_Paint(object sender, PaintEventArgs e)
+        {
+            Pen myPen = new Pen(Color.Red, 3);
+            Brush myBrush = Brushes.Aquamarine;
+            Font myFont = new Font("Arial", 18, FontStyle.Italic);
+            polotno = e.Graphics;
+            polotno.TranslateTransform(picSin.Width / 2, picSin.Height / 2);
         }
     }
 }

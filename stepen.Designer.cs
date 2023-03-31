@@ -37,7 +37,8 @@ namespace Graphics_Nesterovich_k0610
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.btnBuild = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.picStep = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picStep)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -48,6 +49,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // radio1
             // 
@@ -111,20 +113,22 @@ namespace Graphics_Nesterovich_k0610
             this.button1.Text = "Задать цвета";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // picStep
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(184, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 381);
-            this.panel1.TabIndex = 24;
+            this.picStep.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picStep.Location = new System.Drawing.Point(203, 13);
+            this.picStep.Name = "picStep";
+            this.picStep.Size = new System.Drawing.Size(355, 384);
+            this.picStep.TabIndex = 24;
+            this.picStep.TabStop = false;
+            this.picStep.Paint += new System.Windows.Forms.PaintEventHandler(this.picStep_Paint);
             // 
             // stepen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 461);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.picStep);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.radioButton3);
@@ -137,6 +141,7 @@ namespace Graphics_Nesterovich_k0610
             this.MinimizeBox = false;
             this.Name = "stepen";
             this.Text = "Степень";
+            ((System.ComponentModel.ISupportInitialize)(this.picStep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +156,6 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Button btnBuild;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox picStep;
     }
 }

@@ -30,7 +30,6 @@ namespace Graphics_Nesterovich_k0610
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sincos));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblA = new System.Windows.Forms.Label();
@@ -44,20 +43,14 @@ namespace Graphics_Nesterovich_k0610
             this.nudA = new System.Windows.Forms.NumericUpDown();
             this.nudB = new System.Windows.Forms.NumericUpDown();
             this.nudC = new System.Windows.Forms.NumericUpDown();
+            this.picSin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbFuncChoose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(12, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 269);
-            this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -95,9 +88,9 @@ namespace Graphics_Nesterovich_k0610
             this.lblB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblB.Location = new System.Drawing.Point(14, 366);
             this.lblB.Name = "lblB";
-            this.lblB.Size = new System.Drawing.Size(28, 24);
+            this.lblB.Size = new System.Drawing.Size(26, 24);
             this.lblB.TabIndex = 4;
-            this.lblB.Text = "b:";
+            this.lblB.Text = "k:";
             // 
             // label2
             // 
@@ -163,45 +156,89 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudA
             // 
+            this.nudA.DecimalPlaces = 1;
             this.nudA.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
             this.nudA.Location = new System.Drawing.Point(45, 348);
+            this.nudA.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudA.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(93, 20);
             this.nudA.TabIndex = 9;
             // 
             // nudB
             // 
+            this.nudB.DecimalPlaces = 1;
             this.nudB.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
             this.nudB.Location = new System.Drawing.Point(46, 372);
+            this.nudB.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudB.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
             this.nudB.Name = "nudB";
             this.nudB.Size = new System.Drawing.Size(92, 20);
             this.nudB.TabIndex = 10;
             // 
             // nudC
             // 
+            this.nudC.DecimalPlaces = 1;
             this.nudC.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
             this.nudC.Location = new System.Drawing.Point(46, 396);
+            this.nudC.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudC.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
             this.nudC.Name = "nudC";
             this.nudC.Size = new System.Drawing.Size(93, 20);
             this.nudC.TabIndex = 11;
+            // 
+            // picSin
+            // 
+            this.picSin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picSin.Location = new System.Drawing.Point(18, 13);
+            this.picSin.Name = "picSin";
+            this.picSin.Size = new System.Drawing.Size(454, 251);
+            this.picSin.TabIndex = 12;
+            this.picSin.TabStop = false;
+            this.picSin.Paint += new System.Windows.Forms.PaintEventHandler(this.picSin_Paint);
             // 
             // sincos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.picSin);
             this.Controls.Add(this.nudC);
             this.Controls.Add(this.nudB);
             this.Controls.Add(this.nudA);
@@ -213,7 +250,6 @@ namespace Graphics_Nesterovich_k0610
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -225,14 +261,13 @@ namespace Graphics_Nesterovich_k0610
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblA;
@@ -246,5 +281,6 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.NumericUpDown nudA;
         private System.Windows.Forms.NumericUpDown nudB;
         private System.Windows.Forms.NumericUpDown nudC;
+        private System.Windows.Forms.PictureBox picSin;
     }
 }
