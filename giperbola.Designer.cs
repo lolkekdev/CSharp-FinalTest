@@ -35,7 +35,7 @@ namespace Graphics_Nesterovich_k0610
             this.nudA = new System.Windows.Forms.NumericUpDown();
             this.nudB = new System.Windows.Forms.NumericUpDown();
             this.btnBuild = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnColor = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picGPBL = new System.Windows.Forms.PictureBox();
@@ -119,15 +119,17 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild.TabIndex = 14;
             this.btnBuild.Text = "Построить";
             this.btnBuild.UseVisualStyleBackColor = true;
+            this.btnBuild.Click += new System.EventHandler(this.btnBuild_Click);
             // 
-            // button1
+            // btnColor
             // 
-            this.button1.Location = new System.Drawing.Point(17, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 31);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Задать цвета";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnColor.Location = new System.Drawing.Point(17, 128);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(94, 31);
+            this.btnColor.TabIndex = 15;
+            this.btnColor.Text = "Задать цвета";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnBack
             // 
@@ -167,7 +169,7 @@ namespace Graphics_Nesterovich_k0610
             this.Controls.Add(this.picGPBL);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.nudB);
             this.Controls.Add(this.nudA);
@@ -194,7 +196,7 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.NumericUpDown nudA;
         private System.Windows.Forms.NumericUpDown nudB;
         private System.Windows.Forms.Button btnBuild;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picGPBL;

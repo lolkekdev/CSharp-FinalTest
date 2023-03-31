@@ -15,6 +15,10 @@ namespace Graphics_Nesterovich_k0610
 
         Graphics polotno;
         bool razresh = false;
+        Pen myPen = new Pen(Color.Red, 3);
+        Brush myBrush = Brushes.Aquamarine;
+        Font myFont = new Font("Arial", 18, FontStyle.Italic);
+        FormColor colorWin;
 
         public sincos()
         {
@@ -33,11 +37,27 @@ namespace Graphics_Nesterovich_k0610
 
         private void picSin_Paint(object sender, PaintEventArgs e)
         {
-            Pen myPen = new Pen(Color.Red, 3);
-            Brush myBrush = Brushes.Aquamarine;
-            Font myFont = new Font("Arial", 18, FontStyle.Italic);
             polotno = e.Graphics;
             polotno.TranslateTransform(picSin.Width / 2, picSin.Height / 2);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (razresh)
+            {
+                colorWin = new FormColor();
+                colorWin.picBackColor.BackColor = picSin.BackColor;
+                colorWin.picLineColor.BackColor = myPen.Color;
+                colorWin.ShowDialog();
+                picSin.BackColor = colorWin.picBackColor.BackColor;
+                myPen.Color = colorWin.picLineColor.BackColor;
+                colorWin.Dispose();
+                picSin.Invalidate();
+            }
+            else
+            {
+                MessageBox.Show("Сначала постройте график", "Ошибка");
+            }
         }
     }
 }

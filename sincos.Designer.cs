@@ -39,7 +39,7 @@ namespace Graphics_Nesterovich_k0610
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioSin = new System.Windows.Forms.RadioButton();
             this.btnBuild = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnColor = new System.Windows.Forms.Button();
             this.nudA = new System.Windows.Forms.NumericUpDown();
             this.nudB = new System.Windows.Forms.NumericUpDown();
             this.nudC = new System.Windows.Forms.NumericUpDown();
@@ -145,14 +145,15 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild.Text = "Построить";
             this.btnBuild.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnColor
             // 
-            this.button1.Location = new System.Drawing.Point(364, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Задать цвета";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnColor.Location = new System.Drawing.Point(364, 312);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(94, 31);
+            this.btnColor.TabIndex = 8;
+            this.btnColor.Text = "Задать цвета";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.button1_Click);
             // 
             // nudA
             // 
@@ -242,7 +243,7 @@ namespace Graphics_Nesterovich_k0610
             this.Controls.Add(this.nudC);
             this.Controls.Add(this.nudB);
             this.Controls.Add(this.nudA);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.gbFuncChoose);
             this.Controls.Add(this.label2);
@@ -277,7 +278,7 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioSin;
         private System.Windows.Forms.Button btnBuild;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.NumericUpDown nudA;
         private System.Windows.Forms.NumericUpDown nudB;
         private System.Windows.Forms.NumericUpDown nudC;
