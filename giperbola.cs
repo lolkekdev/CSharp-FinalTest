@@ -59,6 +59,12 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBuild_Click(object sender, EventArgs e)
         {
+            razresh = true;
+            picGPBL.Invalidate();
+        }
+
+        private void picGPBL_Click(object sender, EventArgs e)
+        {
 
         }
     }

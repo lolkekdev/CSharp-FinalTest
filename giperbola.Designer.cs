@@ -159,6 +159,7 @@ namespace Graphics_Nesterovich_k0610
             this.picGPBL.Size = new System.Drawing.Size(376, 416);
             this.picGPBL.TabIndex = 19;
             this.picGPBL.TabStop = false;
+            this.picGPBL.Click += new System.EventHandler(this.picGPBL_Click);
             this.picGPBL.Paint += new System.Windows.Forms.PaintEventHandler(this.picGPBL_Paint);
             // 
             // giperbola
