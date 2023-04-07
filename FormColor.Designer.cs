@@ -100,6 +100,8 @@ namespace Graphics_Nesterovich_k0610
             this.Controls.Add(this.lblLine);
             this.Controls.Add(this.lblFon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormColor";
             this.Text = "Выбор цвета";
             ((System.ComponentModel.ISupportInitialize)(this.picBackColor)).EndInit();
