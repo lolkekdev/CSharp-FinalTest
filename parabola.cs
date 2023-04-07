@@ -18,8 +18,6 @@ namespace Graphics_Nesterovich_k0610
         FormColor colorWin;
 
         Pen myPen = new Pen(Color.Red, 3);
-        Brush myBrush = Brushes.Aquamarine;
-        Font myFont = new Font("Arial", 18, FontStyle.Italic);
 
         public parabola()
         {
