@@ -36,8 +36,8 @@ namespace Graphics_Nesterovich_k0610
             this.lblB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbFuncChoose = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioSin = new System.Windows.Forms.RadioButton();
+            this.rdbcos = new System.Windows.Forms.RadioButton();
+            this.rdbsin = new System.Windows.Forms.RadioButton();
             this.btnBuild = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.nudA = new System.Windows.Forms.NumericUpDown();
@@ -56,9 +56,9 @@ namespace Graphics_Nesterovich_k0610
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::Graphics_Nesterovich_k0610.Properties.Resources.sin;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 390);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 390);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(335, 119);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -105,8 +105,8 @@ namespace Graphics_Nesterovich_k0610
             // 
             // gbFuncChoose
             // 
-            this.gbFuncChoose.Controls.Add(this.radioButton1);
-            this.gbFuncChoose.Controls.Add(this.radioSin);
+            this.gbFuncChoose.Controls.Add(this.rdbcos);
+            this.gbFuncChoose.Controls.Add(this.rdbsin);
             this.gbFuncChoose.Location = new System.Drawing.Point(148, 283);
             this.gbFuncChoose.Name = "gbFuncChoose";
             this.gbFuncChoose.Size = new System.Drawing.Size(166, 77);
@@ -114,27 +114,27 @@ namespace Graphics_Nesterovich_k0610
             this.gbFuncChoose.TabStop = false;
             this.gbFuncChoose.Text = "Выберите функцию";
             // 
-            // radioButton1
+            // rdbcos
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 43);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(91, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Косинусоида";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbcos.AutoSize = true;
+            this.rdbcos.Location = new System.Drawing.Point(7, 43);
+            this.rdbcos.Name = "rdbcos";
+            this.rdbcos.Size = new System.Drawing.Size(91, 17);
+            this.rdbcos.TabIndex = 1;
+            this.rdbcos.TabStop = true;
+            this.rdbcos.Text = "Косинусоида";
+            this.rdbcos.UseVisualStyleBackColor = true;
             // 
-            // radioSin
+            // rdbsin
             // 
-            this.radioSin.AutoSize = true;
-            this.radioSin.Location = new System.Drawing.Point(7, 20);
-            this.radioSin.Name = "radioSin";
-            this.radioSin.Size = new System.Drawing.Size(79, 17);
-            this.radioSin.TabIndex = 0;
-            this.radioSin.TabStop = true;
-            this.radioSin.Text = "Синусоида";
-            this.radioSin.UseVisualStyleBackColor = true;
+            this.rdbsin.AutoSize = true;
+            this.rdbsin.Location = new System.Drawing.Point(7, 20);
+            this.rdbsin.Name = "rdbsin";
+            this.rdbsin.Size = new System.Drawing.Size(79, 17);
+            this.rdbsin.TabIndex = 0;
+            this.rdbsin.TabStop = true;
+            this.rdbsin.Text = "Синусоида";
+            this.rdbsin.UseVisualStyleBackColor = true;
             // 
             // btnBuild
             // 
@@ -144,6 +144,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild.TabIndex = 7;
             this.btnBuild.Text = "Построить";
             this.btnBuild.UseVisualStyleBackColor = true;
+            this.btnBuild.Click += new System.EventHandler(this.btnBuild_Click);
             // 
             // btnColor
             // 
@@ -275,8 +276,8 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.Label lblB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbFuncChoose;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioSin;
+        private System.Windows.Forms.RadioButton rdbcos;
+        private System.Windows.Forms.RadioButton rdbsin;
         private System.Windows.Forms.Button btnBuild;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.NumericUpDown nudA;
