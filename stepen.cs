@@ -12,6 +12,7 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class stepen : Form
     {
+		// f около числа это число с float
 
         bool razresh = false;
 		Graphics polotno;
@@ -42,11 +43,11 @@ namespace Graphics_Nesterovich_k0610
 			polotno.DrawLine(pen, 0, -10 * num2, 0, 10 * num2);
 			for (int i = -10; i <= 10; i++)
 			{
-				polotno.DrawLine(pen, -7, picPole.Width / 20 * i, 7, picPole.Width / 20 * i);
+				polotno.DrawLine(pen, -10, picPole.Width / 20 * i, 10, picPole.Width / 20 * i);
 			}
 			for (int j = -10; j <= 10; j++)
 			{
-				polotno.DrawLine(pen, picPole.Height / 20 * j, -7, picPole.Height / 20 * j, 7);
+				polotno.DrawLine(pen, picPole.Height / 20 * j, -10, picPole.Height / 20 * j, 10);
 			}
 			if (radio3.Checked)
 			{

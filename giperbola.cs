@@ -43,13 +43,13 @@ namespace Graphics_Nesterovich_k0610
             polotno.DrawLine(pen, 0, -10 * num4, 0, 10 * num4);
             for (int i = -10; i <= 10; i++)
             {
-                polotno.DrawLine(pen, -7, picGPBL.Width / 20 * i, 7, picGPBL.Width / 20 * i);
+                polotno.DrawLine(pen, -10, picGPBL.Width / 20 * i, 10, picGPBL.Width / 20 * i);
             }
             for (int j = -10; j <= 10; j++)
             {
-                polotno.DrawLine(pen, picGPBL.Height / 20 * j, -7, picGPBL.Height / 20 * j, 7);
+                polotno.DrawLine(pen, picGPBL.Height / 20 * j, -10, picGPBL.Height / 20 * j, 10);
             }
-            for (float num5 = -10f; (double)num5 <= (double)(0f - num2) - 0.05; num5 += 0.05f)
+            for (float num5 = -10f; (double)num5 <= (double)(0f - num2) - 0.05; num5 += 0.05f)    // f - принудительно к float
             {
                 float num6 = 0f - num / (num5 + num2);
                 float num7 = 0f - (float)((double)num / ((double)num5 + 0.05 + (double)num2));
