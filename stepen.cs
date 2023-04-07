@@ -25,7 +25,7 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void picStep_Paint(object sender, PaintEventArgs e)
@@ -54,11 +54,11 @@ namespace Graphics_Nesterovich_k0610
 				for (float num3 = -10f; num3 <= 10f; num3 += 0.05f)
 				{
 					float num4 = 0f - num3 * num3 * num3;
-					float num5 = 0f - (float)(((double)num3 + 0.05) * ((double)num3 + 0.05) * ((double)num3 + 0.05));
-					float x = (float)(picPole.Width / 20) * num3;
-					float x2 = (float)((double)(picPole.Width / 20) * ((double)num3 + 0.05));
-					num4 = (float)(picPole.Height / 20) * num4;
-					num5 = (float)(picPole.Height / 20) * num5;
+					float num5 = 0f - (float)((num3 + 0.05) * (num3 + 0.05) * (num3 + 0.05));
+					float x = picPole.Width / 20 * num3;
+					float x2 = (float)(picPole.Width / 20 * (num3 + 0.05));
+					num4 = picPole.Height / 20 * num4;
+					num5 = picPole.Height / 20 * num5;
 					polotno.DrawLine(myPen, x, num4, x2, num5);
 				}
 			}
@@ -67,11 +67,11 @@ namespace Graphics_Nesterovich_k0610
 				for (float num6 = -10f; num6 <= 10f; num6 += 0.05f)
 				{
 					float num7 = 0f - num6 * num6;
-					float num8 = 0f - (float)(((double)num6 + 0.05) * ((double)num6 + 0.05));
-					float x3 = (float)(picPole.Width / 20) * num6;
-					float x4 = (float)((double)(picPole.Width / 20) * ((double)num6 + 0.05));
-					num7 = (float)(picPole.Height / 20) * num7;
-					num8 = (float)(picPole.Height / 20) * num8;
+					float num8 = 0f - (float)((num6 + 0.05) * (num6 + 0.05));
+					float x3 = picPole.Width / 20 * num6;
+					float x4 = (float)(picPole.Width / 20 * (num6 + 0.05));
+					num7 = picPole.Height / 20 * num7;
+					num8 = picPole.Height / 20 * num8;
 					polotno.DrawLine(myPen, x3, num7, x4, num8);
 				}
 			}
@@ -80,11 +80,11 @@ namespace Graphics_Nesterovich_k0610
 				for (float num9 = -10f; num9 <= 10f; num9 += 0.05f)
 				{
 					float num10 = 0f - num9;
-					float num11 = 0f - (float)((double)num9 + 0.05);
-					float x5 = (float)(picPole.Width / 20) * num9;
-					float x6 = (float)((double)(picPole.Width / 20) * ((double)num9 + 0.05));
-					num10 = (float)(picPole.Height / 20) * num10;
-					num11 = (float)(picPole.Height / 20) * num11;
+					float num11 = 0f - (float)(num9 + 0.05);
+					float x5 = picPole.Width / 20 * num9;
+					float x6 = (float)(picPole.Width / 20 * (num9 + 0.05));
+					num10 = picPole.Height / 20 * num10;
+					num11 = picPole.Height / 20 * num11;
 					polotno.DrawLine(myPen, x5, num10, x6, num11);
 				}
 			}
@@ -93,11 +93,11 @@ namespace Graphics_Nesterovich_k0610
 				for (float num12 = -10f; num12 <= 10f; num12 += 0.05f)
 				{
 					float num13 = 0f - num12 * num12 * num12 * num12;
-					float num14 = 0f - (float)(((double)num12 + 0.05) * ((double)num12 + 0.05) * ((double)num12 + 0.05) * ((double)num12 + 0.05));
-					float x7 = (float)(picPole.Width / 20) * num12;
-					float x8 = (float)((double)(picPole.Width / 20) * ((double)num12 + 0.05));
-					num13 = (float)(picPole.Height / 20) * num13;
-					num14 = (float)(picPole.Height / 20) * num14;
+					float num14 = 0f - (float)((num12 + 0.05) * (num12 + 0.05) * (num12 + 0.05) * (num12 + 0.05));
+					float x7 = picPole.Width / 20 * num12;
+					float x8 = (float)(picPole.Width / 20 * (num12 + 0.05));
+					num13 = picPole.Height / 20 * num13;
+					num14 = picPole.Height / 20 * num14;
 					polotno.DrawLine(myPen, x7, num13, x8, num14);
 				}
 			}

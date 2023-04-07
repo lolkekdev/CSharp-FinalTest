@@ -28,7 +28,7 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void picPRBL_Paint(object sender, PaintEventArgs e)

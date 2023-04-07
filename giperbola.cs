@@ -26,7 +26,7 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void picGPBL_Paint(object sender, PaintEventArgs e)
@@ -49,24 +49,24 @@ namespace Graphics_Nesterovich_k0610
             {
                 polotno.DrawLine(pen, picGPBL.Height / 20 * j, -10, picGPBL.Height / 20 * j, 10);
             }
-            for (float num5 = -10f; (double)num5 <= (double)(0f - num2) - 0.05; num5 += 0.05f)    // f - принудительно к float
+            for (float num5 = -10f; num5 <= 0f - num2 - 0.05; num5 += 0.05f)    // f - принудительно к float
             {
                 float num6 = 0f - num / (num5 + num2);
-                float num7 = 0f - (float)((double)num / ((double)num5 + 0.05 + (double)num2));
-                float x = (float)(picGPBL.Width / 20) * num5;
-                float x2 = (float)((double)(picGPBL.Width / 20) * ((double)num5 + 0.05));
-                num6 = (float)(picGPBL.Height / 20) * num6;
-                num7 = (float)(picGPBL.Height / 20) * num7;
+                float num7 = 0f - (float)(num / num5 + 0.05 + num2);
+                float x = picGPBL.Width / 20 * num5;
+                float x2 = (float)(picGPBL.Width / 20 * (num5 + 0.05));
+                num6 = picGPBL.Height / 20 * num6;
+                num7 = picGPBL.Height / 20 * num7;
                 polotno.DrawLine(myPen, x, num6, x2, num7);
             }
             for (float num8 = 0f - num2 + 0.05f; num8 <= 10f; num8 += 0.05f)
             {
                 float num9 = 0f - num / (num8 + num2);
-                float num10 = 0f - (float)((double)num / ((double)num8 + 0.05 + (double)num2));
-                float x3 = (float)(picGPBL.Width / 20) * num8;
-                float x4 = (float)((double)(picGPBL.Width / 20) * ((double)num8 + 0.05));
-                num9 = (float)(picGPBL.Height / 20) * num9;
-                num10 = (float)(picGPBL.Height / 20) * num10;
+                float num10 = 0f - (float)(num / (num8 + 0.05 + num2));
+                float x3 = picGPBL.Width / 20 * num8;
+                float x4 = (float)(picGPBL.Width / 20 * (num8 + 0.05));
+                num9 = picGPBL.Height / 20 * num9;
+                num10 = picGPBL.Height / 20 * num10;
                 polotno.DrawLine(myPen, x3, num9, x4, num10);
             }
         }
