@@ -31,13 +31,13 @@ namespace Graphics_Nesterovich_k0610
 
         private void picPRBL_Paint(object sender, PaintEventArgs e)
         {
-            polotno = e.Graphics;
-            polotno.TranslateTransform(picPRBL.Width / 2, picPRBL.Height / 2);
+           
         }
 
         private void btnBuild_Click(object sender, EventArgs e)
         {
-
+            razresh = true;
+            picPRBL.Invalidate();
         }
 
         private void btnColor_Click(object sender, EventArgs e)
