@@ -18,6 +18,7 @@ namespace Graphics_Nesterovich_k0610
         FormColor colorWin;
 
         Pen myPen = new Pen(Color.Red, 3);
+        Pen lienPen = new Pen(Color.Black, 1);
 
         public parabola()
         {
@@ -31,8 +32,37 @@ namespace Graphics_Nesterovich_k0610
 
         private void picPRBL_Paint(object sender, PaintEventArgs e)
         {
-           
-        }
+            if (razresh)
+            {
+                float num = (float)nudA.Value;
+                float num2 = (float)nudB.Value;
+                float num3 = (float)nudC.Value;
+                polotno = e.Graphics;
+                polotno.TranslateTransform(picPRBL.Width / 2, picPRBL.Height / 2);
+                float num4 = picPRBL.Width / 10;
+                float num5 = picPRBL.Height / 10;
+                polotno.DrawLine(lienPen, -10f * num4, 0f, 10f * num4, 0f);
+                polotno.DrawLine(lienPen, 0f, -10f * num5, 0f, 10f * num5);
+                for (int i = -10; i <= 10; i++)
+                {
+                    polotno.DrawLine(lienPen, -7, picPRBL.Width / 20 * i, 7, picPRBL.Width / 20 * i);
+                }
+                for (int j = -10; j <= 10; j++)
+                {
+                    polotno.DrawLine(lienPen, picPRBL.Height / 20 * j, -7, picPRBL.Height / 20 * j, 7);
+                }
+                for (float num6 = -10f; num6 < 10f; num6 += 0.5f)
+                {
+                    float num7 = 0f - (num * num6 * num6 + num2 * num6 + num3);
+                    float num8 = 0f - (float)(num * (num6 + 0.5) * (num6 + 0.5) + num2 * (num6 + 0.5) + num3);
+                    float x = picPRBL.Width / 20 * num6;
+                    float x2 = (float)(picPRBL.Width / 20 * (num6 + 0.5));
+                    num7 = picPRBL.Width / 20 * num7;
+                    num8 = picPRBL.Width / 20 * num8;
+                    polotno.DrawLine(myPen, x, num7, x2, num8);
+                }
+            }
+            }
 
         private void btnBuild_Click(object sender, EventArgs e)
         {
