@@ -17,6 +17,7 @@ namespace Graphics_Nesterovich_k0610
         bool razresh = false;
         Pen myPen = new Pen(Color.Red, 3);
         FormColor colorWin;
+        Random rnd = new Random();
 
         public sincos()
         {
@@ -123,6 +124,20 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBuild_Click(object sender, EventArgs e) // Отрисовка графика и линий
         {
+            razresh = true;
+            picSin.Invalidate();
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int r1 = rnd.Next(-5, 5);
+            int r2 = rnd.Next(-5, 5);
+            int r3 = rnd.Next(-5, 5);
+
+            nudA.Value = r1;
+            nudB.Value = r2;
+            nudC.Value = r3;
+
             razresh = true;
             picSin.Invalidate();
         }

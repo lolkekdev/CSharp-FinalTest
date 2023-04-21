@@ -17,6 +17,7 @@ namespace Graphics_Nesterovich_k0610
         Graphics polotno;
         FormColor colorWin;
         bool razresh = false;
+        Random rnd = new Random();
 
         public giperbola()
         {
@@ -121,6 +122,18 @@ namespace Graphics_Nesterovich_k0610
         private void giperbola_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int r1 = rnd.Next(-10, 10);
+            int r2 = rnd.Next(-10, 10);
+
+            nudA.Value = r1;
+            nudB.Value = r2;
+
+            razresh = true;
+            picGPBL.Invalidate();
         }
     }
 }

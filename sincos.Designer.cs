@@ -44,6 +44,7 @@ namespace Graphics_Nesterovich_k0610
             this.nudB = new System.Windows.Forms.NumericUpDown();
             this.nudC = new System.Windows.Forms.NumericUpDown();
             this.picSin = new System.Windows.Forms.PictureBox();
+            this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbFuncChoose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
@@ -235,11 +236,22 @@ namespace Graphics_Nesterovich_k0610
             this.picSin.TabStop = false;
             this.picSin.Paint += new System.Windows.Forms.PaintEventHandler(this.picSin_Paint);
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(332, 349);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(126, 23);
+            this.btnRandom.TabIndex = 21;
+            this.btnRandom.Text = "Случайный график";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // sincos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.picSin);
             this.Controls.Add(this.nudC);
             this.Controls.Add(this.nudB);
@@ -284,5 +296,6 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.NumericUpDown nudB;
         private System.Windows.Forms.NumericUpDown nudC;
         private System.Windows.Forms.PictureBox picSin;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

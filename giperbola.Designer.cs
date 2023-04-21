@@ -39,6 +39,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picGPBL = new System.Windows.Forms.PictureBox();
+            this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,11 +163,22 @@ namespace Graphics_Nesterovich_k0610
             this.picGPBL.Click += new System.EventHandler(this.picGPBL_Click);
             this.picGPBL.Paint += new System.Windows.Forms.PaintEventHandler(this.picGPBL_Paint);
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(17, 165);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(126, 23);
+            this.btnRandom.TabIndex = 20;
+            this.btnRandom.Text = "Случайный график";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // giperbola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 461);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.picGPBL);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
@@ -202,5 +214,6 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picGPBL;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

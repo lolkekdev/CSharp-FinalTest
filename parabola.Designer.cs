@@ -41,6 +41,7 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.picPRBL = new System.Windows.Forms.PictureBox();
+            this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).BeginInit();
@@ -197,11 +198,22 @@ namespace Graphics_Nesterovich_k0610
             this.picPRBL.TabStop = false;
             this.picPRBL.Paint += new System.Windows.Forms.PaintEventHandler(this.picPRBL_Paint);
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(12, 198);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(126, 23);
+            this.btnRandom.TabIndex = 21;
+            this.btnRandom.Text = "Случайный график";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // parabola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 461);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.picPRBL);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnBuild);
@@ -241,5 +253,6 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.Button btnBuild;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.PictureBox picPRBL;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

@@ -20,6 +20,8 @@ namespace Graphics_Nesterovich_k0610
         Pen myPen = new Pen(Color.Red, 3);
         Pen lienPen = new Pen(Color.Black, 1);
 
+        Random rnd = new Random();
+
         public parabola()
         {
             InitializeComponent();
@@ -99,6 +101,20 @@ namespace Graphics_Nesterovich_k0610
         private void nudA_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int r1 = rnd.Next(-10, 10);
+            int r2 = rnd.Next(-10, 10);
+            int r3 = rnd.Next(-10, 10);
+
+            nudA.Value = r1;
+            nudB.Value = r2;
+            nudC.Value = r3;
+
+            razresh = true;
+            picPRBL.Invalidate();
         }
     }
 }
