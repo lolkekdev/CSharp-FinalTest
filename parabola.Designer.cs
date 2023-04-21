@@ -99,7 +99,7 @@ namespace Graphics_Nesterovich_k0610
             // 
             // nudA
             // 
-            this.nudA.DecimalPlaces = 1;
+            this.nudA.DecimalPlaces = 2;
             this.nudA.Increment = new decimal(new int[] {
             1,
             0,
@@ -119,6 +119,7 @@ namespace Graphics_Nesterovich_k0610
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(93, 20);
             this.nudA.TabIndex = 10;
+            this.nudA.ValueChanged += new System.EventHandler(this.nudA_ValueChanged);
             // 
             // nudB
             // 

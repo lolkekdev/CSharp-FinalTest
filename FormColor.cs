@@ -19,18 +19,19 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Dispose(); // Удаление окна
         }
 
         private void picBackColor_Click(object sender, EventArgs e)
         {
-            cd.ShowDialog();
+            cd.ShowDialog(); // Выбор цвета фона и его применение
             picBackColor.BackColor = cd.Color;
         }
 
         private void picLineColor_Click(object sender, EventArgs e)
         {
-            cd.ShowDialog();
+            cd.ShowDialog(); // Выбор цвета линии и его применение
+            cd.ShowDialog(); // Выбор цвета линии и его применение
             picLineColor.BackColor = cd.Color;
         }
     }

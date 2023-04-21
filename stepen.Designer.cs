@@ -36,7 +36,7 @@ namespace Graphics_Nesterovich_k0610
             this.radio3 = new System.Windows.Forms.RadioButton();
             this.radio4 = new System.Windows.Forms.RadioButton();
             this.btnBuild = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnColor = new System.Windows.Forms.Button();
             this.picPole = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPole)).BeginInit();
             this.SuspendLayout();
@@ -106,20 +106,21 @@ namespace Graphics_Nesterovich_k0610
             this.btnBuild.UseVisualStyleBackColor = true;
             this.btnBuild.Click += new System.EventHandler(this.btnBuild_Click);
             // 
-            // button1
+            // btnColor
             // 
-            this.button1.Location = new System.Drawing.Point(12, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 31);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Задать цвета";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnColor.Location = new System.Drawing.Point(12, 152);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(94, 31);
+            this.btnColor.TabIndex = 23;
+            this.btnColor.Text = "Задать цвета";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pic
+            // picPole
             // 
             this.picPole.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picPole.Location = new System.Drawing.Point(203, 13);
-            this.picPole.Name = "pic";
+            this.picPole.Name = "picPole";
             this.picPole.Size = new System.Drawing.Size(355, 384);
             this.picPole.TabIndex = 24;
             this.picPole.TabStop = false;
@@ -131,7 +132,7 @@ namespace Graphics_Nesterovich_k0610
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 461);
             this.Controls.Add(this.picPole);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.radio4);
             this.Controls.Add(this.radio3);
@@ -157,7 +158,7 @@ namespace Graphics_Nesterovich_k0610
         private System.Windows.Forms.RadioButton radio3;
         private System.Windows.Forms.RadioButton radio4;
         private System.Windows.Forms.Button btnBuild;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.PictureBox picPole;
     }
 }

@@ -12,9 +12,8 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class giperbola : Form
     {
-
-        Pen myPen = new Pen(Color.Red, 3);
-
+        // Глобальные переменные
+        Pen myPen = new Pen(Color.Red, 3f);
         Graphics polotno;
         FormColor colorWin;
         bool razresh = false;
@@ -24,14 +23,19 @@ namespace Graphics_Nesterovich_k0610
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e) // Избавление от окна
         {
-            Dispose();
+            Dispose(); 
         }
 
-        private void picGPBL_Paint(object sender, PaintEventArgs e)
+        private void picGPBL_Paint(object sender, PaintEventArgs e) // Код для построения
         {
-
+            // Проверка разрешения
+            if (!razresh)
+            {
+                return;
+            }
+            // Основные переменные
             polotno = e.Graphics;
             float num = (float)nudA.Value;
             float num2 = (float)nudB.Value;
@@ -39,8 +43,12 @@ namespace Graphics_Nesterovich_k0610
             int num3 = picGPBL.Width / 10;
             int num4 = picGPBL.Height / 10;
             Pen pen = new Pen(Color.Black, 1f);
+
+            // Отрисовка линий графика
             polotno.DrawLine(pen, -10 * num3, 0, 10 * num3, 0);
             polotno.DrawLine(pen, 0, -10 * num4, 0, 10 * num4);
+
+            // Рисовка линии (f - принудительно к float)
             for (int i = -10; i <= 10; i++)
             {
                 polotno.DrawLine(pen, -10, picGPBL.Width / 20 * i, 10, picGPBL.Width / 20 * i);
@@ -49,7 +57,7 @@ namespace Graphics_Nesterovich_k0610
             {
                 polotno.DrawLine(pen, picGPBL.Height / 20 * j, -10, picGPBL.Height / 20 * j, 10);
             }
-            for (float num5 = -10f; num5 <= 0f - num2 - 0.05; num5 += 0.05f)    // f - принудительно к float
+            for (float num5 = -10f; num5 <= 0f - num2 - 0.05; num5 += 0.05f)
             {
                 float num6 = 0f - num / (num5 + num2);
                 float num7 = 0f - (float)(num / num5 + 0.05 + num2);
@@ -71,7 +79,7 @@ namespace Graphics_Nesterovich_k0610
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Открытие окна выбора цвета и применение выбранных цветов
         {
             if (razresh)
             {
@@ -79,8 +87,17 @@ namespace Graphics_Nesterovich_k0610
                 colorWin.picBackColor.BackColor = picGPBL.BackColor;
                 colorWin.picLineColor.BackColor = myPen.Color;
                 colorWin.ShowDialog();
-                picGPBL.BackColor = colorWin.picBackColor.BackColor;
-                myPen.Color = colorWin.picLineColor.BackColor;
+                DialogResult otv = colorWin.ShowDialog();
+                if (otv == DialogResult.OK)
+                {
+                    picGPBL.BackColor = colorWin.picBackColor.BackColor;
+                    myPen.Color = colorWin.picLineColor.BackColor;
+                }
+                else
+                {
+                    picGPBL.BackColor = Color.Gray;
+                    myPen.Color = Color.Red;
+                }
                 colorWin.Dispose();
                 picGPBL.Invalidate();
             }
@@ -90,13 +107,18 @@ namespace Graphics_Nesterovich_k0610
             }
         }
 
-        private void btnBuild_Click(object sender, EventArgs e)
+        private void btnBuild_Click(object sender, EventArgs e) // Построить график
         {
             razresh = true;
             picGPBL.Invalidate();
         }
 
         private void picGPBL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void giperbola_Load(object sender, EventArgs e)
         {
 
         }

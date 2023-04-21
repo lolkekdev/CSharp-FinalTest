@@ -12,33 +12,39 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class stepen : Form
     {
-		// f около числа это число с float
+		// Основные переменные
 
         bool razresh = false;
 		Graphics polotno;
 		Pen myPen = new Pen(Color.Red, 3);
+		FormColor colorWin;
 
 		public stepen()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e) // Удаление окна
         {
             Dispose();
         }
 
         private void picStep_Paint(object sender, PaintEventArgs e)
         {
+			// Проверка разрешения
 			if (!razresh)
 			{
 				return;
 			}
+			
+			// Основные переменные
 			polotno = e.Graphics;
 			polotno.TranslateTransform(picPole.Width / 2, picPole.Height / 2);
 			int num = picPole.Width / 10;
 			int num2 = picPole.Height / 10;
 			Pen pen = new Pen(Color.Black, 1f);
+			
+			// Отрисовка линий
 			polotno.DrawLine(pen, -10 * num, 0, 10 * num, 0);
 			polotno.DrawLine(pen, 0, -10 * num2, 0, 10 * num2);
 			for (int i = -10; i <= 10; i++)
@@ -49,7 +55,8 @@ namespace Graphics_Nesterovich_k0610
 			{
 				polotno.DrawLine(pen, picPole.Height / 20 * j, -10, picPole.Height / 20 * j, 10);
 			}
-			if (radio3.Checked)
+			
+			if (radio3.Checked) // x3
 			{
 				for (float num3 = -10f; num3 <= 10f; num3 += 0.05f)
 				{
@@ -62,7 +69,7 @@ namespace Graphics_Nesterovich_k0610
 					polotno.DrawLine(myPen, x, num4, x2, num5);
 				}
 			}
-			else if (radio2.Checked)
+			else if (radio2.Checked) // x2
 			{
 				for (float num6 = -10f; num6 <= 10f; num6 += 0.05f)
 				{
@@ -75,7 +82,7 @@ namespace Graphics_Nesterovich_k0610
 					polotno.DrawLine(myPen, x3, num7, x4, num8);
 				}
 			}
-			else if (radio1.Checked)
+			else if (radio1.Checked) // x1
 			{
 				for (float num9 = -10f; num9 <= 10f; num9 += 0.05f)
 				{
@@ -88,7 +95,7 @@ namespace Graphics_Nesterovich_k0610
 					polotno.DrawLine(myPen, x5, num10, x6, num11);
 				}
 			}
-			else if (radio4.Checked)
+			else if (radio4.Checked) //x4
 			{
 				for (float num12 = -10f; num12 <= 10f; num12 += 0.05f)
 				{
@@ -108,10 +115,38 @@ namespace Graphics_Nesterovich_k0610
 
         }
 
-        private void btnBuild_Click(object sender, EventArgs e)
+        private void btnBuild_Click(object sender, EventArgs e) // Отрисовка графика
         {
 			razresh = true;
 			picPole.Invalidate();
         }
+
+        private void button1_Click(object sender, EventArgs e) // Задание цветов
+        {
+			if (razresh)
+			{
+				colorWin = new FormColor();
+				colorWin.picBackColor.BackColor = picPole.BackColor;
+				colorWin.picLineColor.BackColor = myPen.Color;
+				colorWin.ShowDialog();
+				DialogResult otv = colorWin.ShowDialog();
+				if (otv == DialogResult.OK)
+				{
+					picPole.BackColor = colorWin.picBackColor.BackColor;
+					myPen.Color = colorWin.picLineColor.BackColor;
+				}
+				else
+				{
+					picPole.BackColor = Color.Gray;
+					myPen.Color = Color.Red;
+				}
+				colorWin.Dispose();
+				picPole.Invalidate();
+			}
+			else
+			{
+				MessageBox.Show("Сначала постройте график", "Ошибка");
+			}
+		}
     }
 }

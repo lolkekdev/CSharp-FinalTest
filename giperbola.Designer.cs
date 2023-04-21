@@ -181,6 +181,7 @@ namespace Graphics_Nesterovich_k0610
             this.MinimizeBox = false;
             this.Name = "giperbola";
             this.Text = "Гипербола";
+            this.Load += new System.EventHandler(this.giperbola_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

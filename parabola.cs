@@ -77,9 +77,16 @@ namespace Graphics_Nesterovich_k0610
                 colorWin = new FormColor();
                 colorWin.picBackColor.BackColor = picPRBL.BackColor;
                 colorWin.picLineColor.BackColor = myPen.Color;
-                colorWin.ShowDialog();
+               DialogResult otv =colorWin.ShowDialog();
+                if (otv == DialogResult.OK) {
                 picPRBL.BackColor = colorWin.picBackColor.BackColor;
                 myPen.Color = colorWin.picLineColor.BackColor;
+                }
+                else
+                {
+                    picPRBL.BackColor = Color.Gray;
+                    myPen.Color = Color.Red;
+                }
                 colorWin.Dispose();
                 picPRBL.Invalidate();
             }
@@ -87,6 +94,11 @@ namespace Graphics_Nesterovich_k0610
             {
                 MessageBox.Show("Сначала постройте график", "Ошибка");
             }
+        }
+
+        private void nudA_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

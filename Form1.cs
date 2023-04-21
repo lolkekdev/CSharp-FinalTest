@@ -12,7 +12,7 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class ChoosingForm : Form
     {
-
+		// Инициализация окон
 		parabola prbl;
 		sincos sincos;
 		giperbola gpbl;
@@ -23,7 +23,7 @@ namespace Graphics_Nesterovich_k0610
             InitializeComponent();
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e) // Выбор функции для построения
         {
 			if (radioPRBL.Checked)
 			{

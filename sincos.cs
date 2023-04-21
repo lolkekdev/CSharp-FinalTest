@@ -12,7 +12,7 @@ namespace Graphics_Nesterovich_k0610
 {
     public partial class sincos : Form
     {
-
+        // Основные переменные
         Graphics polotno;
         bool razresh = false;
         Pen myPen = new Pen(Color.Red, 3);
@@ -23,7 +23,7 @@ namespace Graphics_Nesterovich_k0610
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e) // Избавление от окна
         {
             Dispose();
         }
@@ -35,10 +35,13 @@ namespace Graphics_Nesterovich_k0610
 
         private void picSin_Paint(object sender, PaintEventArgs e)
         {
+            // Проверка разрешения
             if (!razresh)
             {
                 return;
             }
+
+            // Основные переменные
             float num = (float)nudA.Value;
             float num2 = (float)nudB.Value;
             float num3 = (float)nudC.Value;
@@ -48,8 +51,12 @@ namespace Graphics_Nesterovich_k0610
             int num5 = picSin.Height / 10;
             Pen pen = new Pen(Color.Black, 1f);
             Pen penline = new Pen(Color.Red, 1f);
+
+            // Линии графика
             polotno.DrawLine(pen, -5 * num4, 0, 5 * num4, 0);
             polotno.DrawLine(pen, 0, -5 * num5, 0, 5 * num5);
+
+            // Отрисовка графика
             for (int i = -10; i <= 10; i++)
             {
                 polotno.DrawLine(pen, -5, picSin.Width / 20 * i, 5, picSin.Width / 20 * i);
@@ -86,7 +93,7 @@ namespace Graphics_Nesterovich_k0610
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Открытие диалога выбора окон и применение цвета
         {
             if (razresh)
             {
@@ -94,8 +101,17 @@ namespace Graphics_Nesterovich_k0610
                 colorWin.picBackColor.BackColor = picSin.BackColor;
                 colorWin.picLineColor.BackColor = myPen.Color;
                 colorWin.ShowDialog();
-                picSin.BackColor = colorWin.picBackColor.BackColor;
-                myPen.Color = colorWin.picLineColor.BackColor;
+                DialogResult otv = colorWin.ShowDialog();
+                if (otv == DialogResult.OK)
+                {
+                    picSin.BackColor = colorWin.picBackColor.BackColor;
+                    myPen.Color = colorWin.picLineColor.BackColor;
+                }
+                else
+                {
+                    picSin.BackColor = Color.Gray;
+                    myPen.Color = Color.Red;
+                }
                 colorWin.Dispose();
                 picSin.Invalidate();
             }
@@ -105,7 +121,7 @@ namespace Graphics_Nesterovich_k0610
             }
         }
 
-        private void btnBuild_Click(object sender, EventArgs e)
+        private void btnBuild_Click(object sender, EventArgs e) // Отрисовка графика и линий
         {
             razresh = true;
             picSin.Invalidate();
