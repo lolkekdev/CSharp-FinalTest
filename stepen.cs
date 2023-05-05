@@ -129,17 +129,8 @@ namespace Graphics_Nesterovich_k0610
 				colorWin.picBackColor.BackColor = picPole.BackColor;
 				colorWin.picLineColor.BackColor = myPen.Color;
 				colorWin.ShowDialog();
-				DialogResult otv = colorWin.ShowDialog();
-				if (otv == DialogResult.OK)
-				{
-					picPole.BackColor = colorWin.picBackColor.BackColor;
-					myPen.Color = colorWin.picLineColor.BackColor;
-				}
-				else
-				{
-					picPole.BackColor = Color.Gray;
-					myPen.Color = Color.Red;
-				}
+				picPole.BackColor = colorWin.picBackColor.BackColor;
+				myPen.Color = colorWin.picLineColor.BackColor;
 				colorWin.Dispose();
 				picPole.Invalidate();
 			}

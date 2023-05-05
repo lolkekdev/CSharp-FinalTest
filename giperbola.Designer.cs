@@ -165,7 +165,7 @@ namespace Graphics_Nesterovich_k0610
             // 
             // btnRandom
             // 
-            this.btnRandom.Location = new System.Drawing.Point(17, 165);
+            this.btnRandom.Location = new System.Drawing.Point(17, 223);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Size = new System.Drawing.Size(126, 23);
             this.btnRandom.TabIndex = 20;

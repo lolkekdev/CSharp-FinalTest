@@ -26,7 +26,7 @@ namespace Graphics_Nesterovich_k0610
 
         private void btnBack_Click(object sender, EventArgs e) // Избавление от окна
         {
-            Dispose(); 
+            Dispose();
         }
 
         private void picGPBL_Paint(object sender, PaintEventArgs e) // Код для построения
@@ -88,17 +88,8 @@ namespace Graphics_Nesterovich_k0610
                 colorWin.picBackColor.BackColor = picGPBL.BackColor;
                 colorWin.picLineColor.BackColor = myPen.Color;
                 colorWin.ShowDialog();
-                DialogResult otv = colorWin.ShowDialog();
-                if (otv == DialogResult.OK)
-                {
-                    picGPBL.BackColor = colorWin.picBackColor.BackColor;
-                    myPen.Color = colorWin.picLineColor.BackColor;
-                }
-                else
-                {
-                    picGPBL.BackColor = Color.Gray;
-                    myPen.Color = Color.Red;
-                }
+                picGPBL.BackColor = colorWin.picBackColor.BackColor;
+                myPen.Color = colorWin.picLineColor.BackColor;
                 colorWin.Dispose();
                 picGPBL.Invalidate();
             }

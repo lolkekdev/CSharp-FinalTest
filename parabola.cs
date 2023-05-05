@@ -79,16 +79,8 @@ namespace Graphics_Nesterovich_k0610
                 colorWin = new FormColor();
                 colorWin.picBackColor.BackColor = picPRBL.BackColor;
                 colorWin.picLineColor.BackColor = myPen.Color;
-               DialogResult otv =colorWin.ShowDialog();
-                if (otv == DialogResult.OK) {
                 picPRBL.BackColor = colorWin.picBackColor.BackColor;
                 myPen.Color = colorWin.picLineColor.BackColor;
-                }
-                else
-                {
-                    picPRBL.BackColor = Color.Gray;
-                    myPen.Color = Color.Red;
-                }
                 colorWin.Dispose();
                 picPRBL.Invalidate();
             }
