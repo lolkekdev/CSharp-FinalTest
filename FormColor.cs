@@ -31,7 +31,6 @@ namespace Graphics_Nesterovich_k0610
         private void picLineColor_Click(object sender, EventArgs e)
         {
             cd.ShowDialog(); // Выбор цвета линии и его применение
-            cd.ShowDialog(); // Выбор цвета линии и его применение
             picLineColor.BackColor = cd.Color;
         }
     }
